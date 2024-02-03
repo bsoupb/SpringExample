@@ -23,7 +23,7 @@ public class Ex01RestController {
 	public ResponseEntity<Person> entityResponse(){ 
 		
 		Person me = new Person("홍길동", 29);
-		// HTTP Status Code : 응답에 문제가 있는지 
+		// HTTP Status Code : 응답에 문제가 있는지 	
 		// 200 OK
 		// 404 Not Found : 페이지가 없음 (주소확인)
 		// 405 Method Not Allow : 메소드가 일치 하지 않음 (Get, Post)
