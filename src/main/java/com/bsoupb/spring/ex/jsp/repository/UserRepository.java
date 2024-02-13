@@ -12,7 +12,11 @@ public interface UserRepository {
 			@Param("name") String name
 			, @Param("birthday") String birthday
 			,@Param("email") String email);
+
+	public int insertUserByObject(User user);
 	
 	// 가장 최근에 삽입된 행 조회
 	public User selectLastUser();
+	
+	
 }
