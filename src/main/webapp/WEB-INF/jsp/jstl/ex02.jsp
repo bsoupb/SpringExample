@@ -42,8 +42,23 @@
 		<%-- count : 반복 횟수, index : 인덱스, first : 반복상태 처음인지, last : 반복상태 마지막인지 --%>
 	</c:forEach>
 	
-	
-	
+	<h3>사용자 리스트</h3>
+	<table border="1">
+		<thead>
+			<th>이름</th>
+			<th>나이</th>
+			<th>취미</th>
+		</thead>
+		<tbody>
+			<c:forEach var="user" items="${userList }">
+				<tr>
+					<td>${user.name }</td>
+					<td>${user.age }</td>
+					<td>${user.hobby }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 	
 	
 	
