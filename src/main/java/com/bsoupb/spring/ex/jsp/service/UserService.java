@@ -1,5 +1,7 @@
 package com.bsoupb.spring.ex.jsp.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,5 +29,22 @@ public class UserService {
 	public User getLastUser() {
 		User user = userRepository.selectLastUser();
 		return user;
+	}
+	
+	public List<User> getUserList(){
+		List<User> userList = userRepository.selectUserList();
+		return userList;
+	}
+	
+	// email을 전달 받고 중복여부를 리턴하는 기능
+	public boolean isDuplicateEmail(String email) {
+		int count = userRepository.selectCountEmail(email);
+		
+		if(count >= 1) {
+			return true;
+		} else {
+			return false;
+		}
+	
 	}
 }
